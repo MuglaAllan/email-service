@@ -1,0 +1,20 @@
+<div th:fragment="permit_temp" xmlns:th="http://www.thymeleaf.org">
+    <div class="license_temp">
+        <br>
+        <div class = "text_circle">
+        <strong><span>TTS</span></strong>
+        <br>
+            <strong><span>VEHICLE EXEMPTION PERMIT</span></strong>
+        <br>
+        <br>
+        <span  th:text="'Permit Number: ' + ${permit_number}" ></span>
+        <br>
+        <span  th:text="'License Holder: ' + ${recipient_name}"></span>
+        <br>
+        <span th:text="'Registration Number: ' + ${registration_number}" ></span>
+        <br>
+        <span th:text="'Expiry Date: ' + ${end_date}"></span>
+        <br>
+        </div>
+</div>
+</div>

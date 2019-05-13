@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta>
+<meta charset="UTF-8"/>
+</meta>
+<title>Permit Renew</title>
+</head>
+<h5 class="centre">Dear</h5><div class="centre" th:text="${recipient_name}"></div>
+
+<p> Reminder to let you renew your permit is about to expiry, please use the link below to renew your permit</p>
+
+Application Ref Number : <div th:text="${docUUID}"></div>
+
+<div class="centre" th:text="${link}"></div>
+
+</html>

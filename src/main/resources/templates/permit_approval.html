@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta>
+<meta charset="UTF-8"/>
+</meta>
+<title>Permit Approval</title>
+</head>
+<h5 class="centre">Dear</h5><div class="centre" th:text="${recipient_name}"></div>
+
+
+Thank you for your P30 permit application.
+
+Application Ref Number : <div th:text="${docUUID}"></div>
+
+
+
+The Inspector of Motor Traffic has agreed to grant the permit with the conditions listed below:-
+
+
+<h4>Conditions:</h4>
+<div class="textbox" id="conditions">
+    <ol>
+        <li th:each="condition:${conditions}" th:text="${condition.condition_name}"></li>
+    </ol>
+</div>
+
+
+<div th:switch="${permit_period}">
+    <p th:case="'Temporary'">Please use the link to pay for your permit:</p>
+    <p th:case="*">Please use the link to book an inspection:</p>
+</div>
+<div class="centre" th:text="${link}"></div>
+
+</html>
